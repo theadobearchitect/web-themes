@@ -1,0 +1,28 @@
+/*Standard Font Color CSS*/
+@each $color, $value in $richtext_font-colors {
+    .font-color-#{$color} {
+        color: $value;
+    }
+}
+
+/*Standard Font Size CSS*/
+@each $size, $value in $richtext_font-sizes {
+    .font-size-#{$size} {
+        font-size: $value;
+        line-height: 1.2; 
+        //font-weight: 300;
+    }
+}
+
+/*Strike Through Style CSS*/
+.strikethrough{text-decoration:line-through}
+
+/*Underline Style CSS*/
+.underline {border-bottom: 1px solid rgba(0, 0, 0, 0.1)}
+
+/* media queries */
+@media (max-width: 768px) {
+    .font-size-sm {
+        font-size: 0.875rem;
+    }
+}

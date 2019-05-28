@@ -1,0 +1,31 @@
+.cmp-timer{
+    h5 {
+        color: #C01818;
+        line-height: .4!important
+    }
+    span {
+        color: #C01818;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    i {	
+        font-style: normal;
+        padding-right: 0.5rem;
+        font-size: 1rem;
+    }
+    i:last-child {	
+        padding-right: 0;
+    }
+}
+/* media queries */
+@media (max-width: 768px) {
+    .cmp-timer {
+        span {
+            font-size: 1rem;
+        }
+        i {	
+            font-size: 0.75rem;
+            padding-right: 0.25rem;
+        }
+    }
+}

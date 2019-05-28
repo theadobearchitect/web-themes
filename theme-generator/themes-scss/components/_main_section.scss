@@ -1,0 +1,91 @@
+.main__section {
+    &--image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &--wrapper {
+        padding: 2rem; 
+        display: flex;
+    }    
+}
+
+.main__section--bg-left > .main__section--image {background-position: top left;}
+.main__section--bg-center > .main__section--image {background-position: center;}
+.main__section--bg-right > .main__section--image {background-position: top right;}
+
+.main__section--content-top > .main__section--wrapper {align-items: flex-start;}
+.main__section--content-center > .main__section--wrapper {align-items: center;}
+.main__section--content-btm > .main__section--wrapper {align-items: flex-end;}
+
+.main__section--default > .main__section--wrapper >  .main__section--wrapper-container{
+    @extend .container;
+}
+
+.main__section--fluid > .main__section--wrapper > .main__section--wrapper-container {
+    @extend .container-fluid;
+}
+
+.main__section--card-deck > .main__section--wrapper > .main__section--wrapper-container > .card__container--type, .main__section--card-deck >  .card__container--type {
+    @extend .card-deck;
+    @include media-breakpoint-up(sm) {
+        .card {
+            margin-bottom: $card-deck-margin;
+            flex: 1; /* fix for IE11 */
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .card {
+            min-width: 13rem;
+        }
+    }
+}
+
+.main__section--card-group > .main__section--wrapper > .main__section--wrapper-container > .card__container--type, .main__section--card-group > .card__container--type {
+    @extend .card-group;  
+    @include media-breakpoint-up(sm) {
+        .card {
+            flex: 1;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .card {
+            min-width: 13rem;
+        }
+    }
+}
+
+@each $name, $value in $main__section-height {
+    .main__section--#{$name} > .main__section--wrapper {min-height: $value;}
+}
+
+@each $color, $value in $theme-colors {
+    .main__section--color-#{$color} {
+        color: color-yiq($value);
+    }
+}
+
+@each $color, $value in $main__section-bgcolors {
+    .main__section--color-#{$color} {
+        background: $value;
+    }
+}
+
+@each $color, $value in $main__section-bgcolors-op {  
+    @include bgcolor-op("main__section--op-l","main__section--color-#{$color}",map-get($value,'r'),map-get($value,'g'),map-get($value,'b'),map-get($value,'l'));
+    @include bgcolor-op("main__section--op-m","main__section--color-#{$color}",map-get($value,'r'),map-get($value,'g'),map-get($value,'b'),map-get($value,'m'));
+    @include bgcolor-op("main__section--op-d","main__section--color-#{$color}",map-get($value,'r'),map-get($value,'g'),map-get($value,'b'),map-get($value,'d'));
+}
+
+.main__section--default > .main_section--no-strech{
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    .main__section--wrapper {
+        padding:0.5rem !important; 
+    }
+}

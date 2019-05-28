@@ -1,0 +1,64 @@
+/*Card Component Elements Hide CSS*/
+.main__section--hide-img .cmp-card__img,.main__section--hide-rte .cmp-card__body,
+.main__section--hide-btn .cmp-card__btn,.main__section--hide-container .cmp-card__container,
+.main__section--hide--badge .cmp-card__badge {
+    display:none;
+}
+/*Card Component Max Number of Columns in a row with Card Group CSS*/
+.main__section--card-group.main__section--card-max-col-2 .cmp-card {
+    min-width:40%;
+}
+.main__section--card-group.main__section--card-max-col-3 .cmp-card {
+    min-width:30%;
+    @include media-breakpoint-down(sm) {
+        min-width: 50%;
+    }
+}
+.main__section--card-group.main__section--card-max-col-4 .cmp-card {
+    min-width:25%;
+}
+.main__section--card-group.main__section--card-max-col-5 .cmp-card {
+    min-width:20%;
+}
+.main__section--card-group.main__section--card-max-col-6 .cmp-card {
+    min-width:15%;
+}
+/*Card Component Max Number of Columns in a row with Card Deck CSS*/
+.main__section--card-deck.main__section--card-max-col-2 .cmp-card {
+    min-width:40%;
+}
+.main__section--card-deck.main__section--card-max-col-3 .cmp-card {
+    min-width:25%;
+    @include media-breakpoint-down(sm) {
+        min-width: 50%;
+    }
+}
+.main__section--card-deck.main__section--card-max-col-4 .cmp-card {
+    min-width:20%;
+}
+.main__section--card-deck.main__section--card-max-col-5 .cmp-card {
+    min-width:15%;
+}
+.main__section--card-deck.main__section--card-max-col-6 .cmp-card {
+    min-width:10%;
+}
+
+.main__section--card-without-border .cmp-card {
+    @extend .border-0;
+}
+.main__section--card-full-image .cmp-card { 
+    @extend .card-img-top;
+}
+.main__section--card-bg-transparent .cmp-card {
+    @extend .bg-transparent;
+}
+.main__section--cardsection-border {
+    border:1px solid rgba(0, 0, 0, 0.07);
+}
+.cmp-cardsection > .main__section--wrapper > .main__section--wrapper-container{
+    padding: 0;
+}
+/*Card Section inside a section  scss*/
+.main__section--wrapper-container .cmp-cardsection.main__section--card-group > .main__section--wrapper {padding: 1rem;}
+.main__section--wrapper-container .cmp-cardsection.main__section--card-deck > .main__section--wrapper{padding: 1rem 1rem 0rem 1rem;}
+.main__section--wrapper-container .cmp-cardsection > .main__section--wrapper > .main__section--wrapper-container {padding: 0rem;}

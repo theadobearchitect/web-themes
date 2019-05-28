@@ -1,0 +1,23 @@
+.cmp-errordetails {
+	width:100%;
+	position:fixed;
+	z-index:100;
+}
+.cmp-errordetails__link,.cmp-errordetails__link:hover{
+    display:block;
+    padding : 0.5rem;
+    text-decoration: none;
+}
+.cmp-errordetails__body > a:after {
+    font-family:'Font Awesome';
+    content: "\f078";
+    margin:0 5px;
+    font-weight:normal;
+    float:left;
+}
+.cmp-errordetails__body > a[aria-expanded="true"]:after {
+    content: "\f077";
+}
+.cmp-errordetails__msg{
+    padding: 0 1rem;
+}

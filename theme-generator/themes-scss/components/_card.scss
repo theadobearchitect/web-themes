@@ -1,0 +1,83 @@
+.cmp-card {
+    padding-bottom:1rem;
+    border-radius: 0;
+}
+.cmp-card__body.card-body{
+    padding: 0.5rem;
+}
+.cmp-card--card-without-border {
+    @extend .border-0;
+}
+.cmp-card--card-full-image { 
+    @extend .card-img-top;
+}
+.cmp-card--card-bg-transparent {
+    @extend .bg-transparent;
+}
+.cmp-card.cmp-card--badge-with-border {
+    border:1px solid !important;
+}
+/*Card Component Elements Hide CSS*/
+.cmp-card--hide-img .cmp-card__img,.cmp-card--hide-rte .cmp-card__body,
+.cmp-card--hide-btn .cmp-card__btn,.cmp-card--hide-container .cmp-card__container,
+.cmp-card--hide-badge .cmp-card__badge {
+    display:none;
+}
+
+/* badge */
+.cmp-card__badge {
+    @include media-breakpoint-up(sm) {
+        height: 2.6vw; 
+    }
+}
+.badge-category {
+    position: relative;
+    width: 5rem;
+    white-space: pre-line;
+    border-radius: 0;
+    font-weight: normal; 
+    padding: .25rem .2rem .15rem; 
+    font-size: 70%;
+    vertical-align: top;
+    &:before,
+    &:after {
+        //css triangle
+        content: '';
+        border-style: solid;
+        border-width: .57rem 2.5rem 0 2.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+    }
+}
+.cmp-card--badge-left .cmp-card__badge {
+    @extend .text-left;
+}
+.cmp-card--badge-center .cmp-card__badge {
+    @extend .text-center;
+}
+.cmp-card--badge-right .cmp-card__badge {
+    @extend .text-right;
+}
+
+@each $color, $value in $theme-colors { 
+    .cmp-card.cmp-card--badge-#{$color}{
+        border-color:#{$value} !important;
+        .badge-category{
+            color: #fff;
+            background-color:#{$value};
+            &:before,
+            &:after {
+                border-color: #{$value} transparent transparent transparent;
+            }
+        }
+    } 
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    .badge-category {
+        font-size: 86%;
+    }
+}

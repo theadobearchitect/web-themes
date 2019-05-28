@@ -1,0 +1,39 @@
+$body-color: #53565A;
+$link-color: #C01818;
+
+$theme-colors: (
+    "primary": #C01818,
+    "secondary": #53565A,
+    "danger": #f1342f,
+    "info": #00aeef,
+    "success": #0bd175,
+    "warning": #ff9900,
+    "outline": #C6C6C6
+);
+
+$main__section-bgcolors: (
+    "black": #000000,
+    "white": #FFFFFF,
+    "deep-gray": #333333,
+    "dark-gray": #53565a,
+    "medium-gray": #939598,
+    "lite-gray": #b1babf,
+    "pale-gray1": #e6e7e8,   
+    "pale-gray2": #f5f6fa,
+    "pale-gray3": #f0f5f9,
+    "mcafee-red": #C01818,
+    "dark-red": #75160d
+);
+
+$main__section-bgcolors-op: (
+    "black": ("r":0,"g":0,"b":0,"l":.25,"m":.5,"d":.75),
+    "white": ("r":255,"g":255,"b":255,"l":.25,"m":.5,"d":.75),
+    "dark-gray": ("r":83,"g":86,"b":90,"l":.25,"m":.5,"d":.75),
+    "medium-gray": ("r":147,"g":149,"b":152,"l":.25,"m":.5,"d":.75),
+    "lite-gray": ("r":177,"g":186,"b":191,"l":.25,"m":.5,"d":.75),
+    "pale-gray1": ("r":230,"g":231,"b":232,"l":.25,"m":.5,"d":.75),  
+    "pale-gray2": ("r":244,"g":246,"b":250,"l":.25,"m":.5,"d":.75),
+    "pale-gray3": ("r":240,"g":245,"b":249,"l":.25,"m":.5,"d":.75),
+    "mcafee-red": ("r":192,"g":24,"b":24,"l":.25,"m":.5,"d":.75),
+    "dark-red": ("r":117,"g":22,"b":13,"l":.25,"m":.5,"d":.75)
+);

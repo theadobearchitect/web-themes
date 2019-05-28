@@ -1,0 +1,45 @@
+.cmp-companylogo__logo {
+    background: url('/content/dam/consumer/en/company-logo/mcafee.png') no-repeat;
+    margin-right: 0rem;
+    vertical-align: middle;
+} 
+.cmp-companylogo {
+    &--horiz a {background-position: 0 -51px;width: 170px;height: 33px;}
+    &--horiz-tag a {background-position: 0 -194px;width: 170px;height: 47px;}
+    &--stack a {background-position: 0 -298px;width: 100px;height: 79px;}
+    &--stack-tag a {background-position: 0 -472px;width: 100px;height: 94px;}
+}
+
+// white logos
+.cmp-header--color-white.cmp-companylogo {
+    &--horiz a {background-position: -240px -51px;width: 170px;height: 33px;}
+    &--horiz-tag a {background-position: -240px -194px;width: 170px;height: 47px;}
+    &--stack a {background-position: -240px -297px;width: 100px;height: 79px;}
+    &--stack-tag a {background-position: -240px -472px;width: 100px;height: 94px;}
+}
+// To show component in edit mode when logo type not selected
+.cmp-companylogo {
+    &--horiz span {display: none;}
+    &--horiz-tag span  {display: none;}
+    &--stack span  {display: none;}
+    &--stack-tag span  {display: none;}
+}
+// extending bootstrap classes
+.cmp-companylogo__logo {@extend .navbar-brand;}
+
+/* media queries */
+@media (max-width: 768px) {
+    .cmp-companylogo {
+        &--horiz a {background-position: 0 -92px;width: 80px;height: 16px;}
+        &--horiz-tag a {background-position: 0 -253px;width: 102px;height: 28px;}
+        &--stack a {background-position: 0 -395px;width: 80px;height: 63px;}
+        &--stack-tag a {background-position: 0 -573px;width: 80px;height: 75px;}
+    }
+    // white logos
+    .cmp-header--color-white.cmp-companylogo {
+        &--horiz a {background-position: -241px -92px;width: 80px;height: 16px;}
+        &--horiz-tag a {background-position: -240px -252px;width: 102px;height: 28px;}
+        &--stack a {background-position: -240px -394px;width: 80px;height: 63px;}
+        &--stack-tag a {background-position: -240px -574px;width: 80px;height: 75px;}
+    }
+}

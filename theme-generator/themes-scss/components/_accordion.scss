@@ -1,0 +1,37 @@
+.cmp-accordion {
+    margin:0 3rem;
+    border-bottom: $border-width solid $gray-600;
+    &__title{
+        @extend .card-header;
+        border-bottom:0 !important;
+        background: transparent;
+        cursor:pointer;
+        a {
+            text-decoration:none !important;
+        }
+    }
+    &__content{
+        flex:1 1 auto;
+        padding:0.75rem 1.25rem;
+        margin-bottom:0;
+    }
+}
+
+.cmp-accordion__title > a {
+    &:after {
+        content: "\f0da"; /* fa-chevron-right */
+        font-family: 'FontAwesome';
+        left: 0.9375rem;
+        margin-top: -2.7rem;
+        font-size: 1.875rem;
+        position: absolute;
+        color: $gray-800;
+    }
+    &[aria-expanded="true"]:after {
+        content: "\F0D7"; /* fa-chevron-down */
+        left: 0.625rem;
+        font-size: 1.875rem;
+        position: absolute;
+        color: $gray-800;
+    }
+}

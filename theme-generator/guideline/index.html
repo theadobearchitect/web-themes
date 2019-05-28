@@ -1,0 +1,1023 @@
+﻿<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Q's 4.1</title>
+        <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/4.1/examples/carousel/carousel.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/4.1/examples/pricing/pricing.css" rel="stylesheet">
+        <script src="https://d3plus.org/js/d3.js"></script>
+        <script src="https://d3plus.org/js/d3plus.js"></script> <!--wraps text in svg-->
+        <link href="css/brand.css" rel="stylesheet">
+        <style>
+            /* ui guideline style only */
+            html {scroll-behavior: smooth;} /*for left nav*/
+            body {margin: 0;display:grid;grid-template-columns: -webkit-min-content 1fr;grid-template-columns: min-content 1fr;font-size: 1rem;padding-top: 0}
+            header {grid-column: 1 / 3;}
+            /*left sticky nav*/
+            nav {white-space: nowrap;margin: 2.5rem 0 0 2rem}
+            nav ul {list-style: none;margin: 0;padding: 0;}
+            @media (min-height: 300px) {nav ul {position: -webkit-sticky;position: sticky;top: 0;}} /* Only stick if you can fit */
+            nav ul li a {display: block;padding: 0.5rem 1rem;text-decoration: none;}
+            a {color:#c01818}
+            a:hover {color: #00AEEF;  text-decoration: none;}
+            nav ul li a.current {font-weight: bold;text-decoration: underline;}
+            main {padding-bottom: 40rem;}
+            footer {grid-column: 1 / 3;background: #607D8B;padding: 5rem 1rem;}
+            /* ends sticky nav */
+
+            .ui section {margin:2rem auto 1rem; width: 90%} 
+            .ui h5 {color:#000;font-weight:300;}
+            .ui .display-10 {font-size: 52px; font-weight:300; color:#bbb}
+            .ui .colums span {display: inline-block}
+            .ui .colum {flex: 1;box-sizing: border-box;margin: 0 .5rem 1rem 0; border: 1px dotted gray;     }
+            .br {border-radius: 8px}
+            /* ends for guideline only */
+        </style>
+    </head>
+    <body class="ui">
+        <header class="pt-4 pl-4">
+            <a class="navbar-brand" href="#"><img src="https://www.mcafee.com/content/dam/global/company-logo/McAFEE_TAG_H_RGB_230x64.png/jcr:content/renditions/original" width="70%"></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#sect1">Carousel</a></li>
+                <li><a href="#sect2">Title component</a></li>
+                <li><a href="#sect3">Buttons</a></li>
+                <li><a href="#sect4">NGM Cards</a></li>
+                <li><a href="#sect5">Cards</a></li>
+                <li><a href="#sect6">Grids</a></li>
+                <li><a href="#sect7">Typography</a></li>
+                <li><a href="#sect8">Modal</a></li>
+                <li><a href="#sect9"></a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="sect1"><h1 class="display-10" style="color:#bbb">Carousel</h1></section> 
+            <section class="shadow-lg p-5 br">
+                <h5 class="mb-4 mt-2">Carousel 1</h5>
+                <!--Carousel Wrapper-->
+                <div id="carousel2" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel2" data-slide-to="1"></li>
+                        <li data-target="#carousel2" data-slide-to="2"></li>
+                    </ol>
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- First slide -->
+                        <div class="carousel-item active">
+                            <!--Mask color-->
+                            <div class="view" style="width:400px">
+                                <video class="video-fluid" autoplay loop muted>
+                                    <source src="images/beach.mp4" type="video/mp4"/>
+                                </video>
+                                <div class="mask rgba-indigo-light"></div>
+                            </div>
+                            <!--Caption-->
+                            <div class="carousel-caption">
+                                <div class="animated fadeInDown">
+                                    <h1 class="display-5">Protect what matters most</h1>
+                                    <p class="lead pr-5 pl-5">More than just anti-virus, McAfee® Total Protection safeguards your identity and helps make sure your private life stays that way.</p>
+                                    <p>For 10 devices</p>
+                                    <h2 class="display-5">$44.99</h2>
+                                    <p><del>$99.99</del>  $55 Off*</p>
+                                    <a class="btn btn-primary mxy-2 mx-2" href="#" role="button">Buy Now</a>
+                                    <a class="btn btn-secondary my-2 mx-2 text-white border-white" href="#" role="button">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third slide -->
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view" style="width:400px">
+                                <video class="video-fluid" autoplay loop muted>
+                                    <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4"/>
+                                </video>
+                                <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <!--Caption-->
+                            <div class="carousel-caption">
+                                <div class="animated fadeInDown">
+                                    <h1 class="display-5">Protect what matters most</h1>
+                                    <p class="lead pr-5 pl-5">More than just anti-virus, McAfee® Total Protection safeguards your identity and helps make sure your private life stays that way.</p>
+                                    <p>For 10 devices</p>
+                                    <h2 class="display-5">$44.99</h2>
+                                    <p><del>$99.99</del>  $55 Off*</p>
+                                    <a class="btn btn-primary my-2 mx-2" href="#" role="button">Buy Now</a>
+                                    <a class="btn btn-secondary my-2 mx-2 text-white border-white" href="#" role="button">Learn More</a>
+                                </div>
+                            </div>
+                            <!--Caption-->
+                        </div>
+                    </div>
+                    <!--Controls-->
+                    <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--Carousel Wrapper-->
+                <h5 class="mb-4 mt-4">Carousel 2</h5>   
+                <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="false">        
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel1" data-slide-to="1"></li>
+                        <li data-target="#carousel1" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="first-slide" src="images/home_hero_family2.jpg" alt="First slide">
+                            <div class="container">
+                                <div class="carousel-caption ovrlay med d-md-block text-left l2 max-w3">
+                                    <h1 class="display-5">Protect what matters most</h1>
+                                    <p class="lead">More than just anti-virus, McAfee® Total Protection safeguards your identity and helps make sure your private life stays that way.</p>
+                                    <p>For 10 devices</p>
+                                    <h2 class="display-5">$44.99</h2>
+                                    <p><del>$99.99</del>  $55 Off*</p>
+                                    <div>
+                                        <a class="btn btn-primary my-2 mx-2" href="#" role="button">Buy Now</a>
+                                        <a class="btn btn-secondary my-2 mx-2 text-white border-white" href="#" role="button">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="second-slide" src="images/mtfuji.jpg" alt="Second slide">
+                            <div class="container">
+                                <div class="carousel-caption ovrlay lite2 d-md-block text-left max-w3">
+                                    <h1 class="display-5">Protect what matters most</h1>
+                                    <p class="lead">More than just anti-virus, McAfee® Total Protection safeguards your identity and helps make sure your private life stays that way.</p>
+                                    <p>For 10 devices</p>
+                                    <h2 class="display-5">$44.99</h2>
+                                    <p><del>$99.99</del>  $55 Off*</p>
+                                    <div>
+                                        <a class="btn btn-primary my-2 mx-2" href="#" role="button">Buy Now</a>
+                                        <a class="btn btn-secondary my-2 mx-2 text-white border-white" href="#" role="button">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="third-slide" src="images/pexels-photo-54204.jpg" alt="Third slide">
+                            <div class="container">
+                                <div class="carousel-caption ovrlay med d-md-block text-right max-w3">
+                                    <h1 class="display-5">Protect what matters most</h1>
+                                    <p class="lead">More than just anti-virus, McAfee® Total Protection safeguards your identity and helps make sure your private life stays that way.</p>
+                                    <p>For 10 devices</p>
+                                    <h2 class="display-5">$44.99</h2>
+                                    <p><del>$99.99</del>  $55 Off*</p>
+                                    <div>
+                                        <a class="btn btn-primary my-2 mx-2" href="#" role="button">Buy Now</a> 
+                                        <a class="btn btn-secondary my-2 mx-2 text-white border-white" href="#" role="button">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-btns">
+                        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="sect2"><h1 class="display-10">Title component</h1></section>
+            <section class="shadow-lg p-5 br">
+                <div class="jumbotron">
+                    <h2 class="display-5 text-center">48 light - Protect your 
+                        <span class="typewrite text-danger" data-period="2000" data-type='[ "identity", "computer", "family" ]'>
+                            <span class="wrap"></span>
+                        </span>
+                    </h2>
+                </div>
+                <div class="jumbotron text-center">
+                    <h1 class="display-5">48 light - The most comprehensive approach to enterprise security.</h1>
+                    <p class="lead">20 light - This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr class="my-4">
+                    <p>16 regular - It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </div>
+            </section>
+            <section id="sect3"><h1 class="display-10 mb-3">Buttons</h1></section>
+            <section class="shadow-lg p-5 br">
+                <h5 class="m-4" style="font-weight:300; color:#bbb">rectangle with rounded corners</h5>
+                <div class="colums">
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-primary">Primary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-secondary">Secondary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-info">Info</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-link">Link</button></span>
+                </div>
+                <h5 class="m-4" style="font-weight:300; color:#bbb">round</h5>
+                <div class="colums">
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-pill-primary">Primary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-pill-secondary">Secondary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-pill-info">Info</button></span>
+                </div>
+                <h5 class="m-4" style="font-weight:300; color:#bbb">outline</h5>
+                <div class="colums">
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-outline-primary">Primary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-outline-secondary">Secondary</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-outline-success">Success</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-outline-danger">Danger</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-outline-warning">Warning</button></span>   
+                </div>
+                <h5 class="m-4" style="font-weight:300; color:#bbb">extras</h5>
+                <div class="colums">
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-sm btn-primary mt-2">Small</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-lg btn-primary">Large</button></span>
+                    <span class="mr-2 mb-2"><a href="#" class="bttn red">rectangle filled</a></span>
+                    <span class="mr-2 mb-2"><a href="#" class="bttn red transparent">rectangle outline</a></span>
+                </div>
+                <h5 class="m-4" style="font-weight:300; color:#bbb">disabled</h5>
+                <div class="colums">
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-primary" disabled>Primary Disabled</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-secondary" disabled>Secondary Disabled</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-pill-primary" disabled>Round Disabled</button></span>
+                    <span class="mr-2 mb-2"><button type="button" class="btn btn-pill-outline-primary" disabled>Round outline Disabled</button></span>
+                </div>
+            </section> 
+            <section id="sect4"><h1 class="display-10">NGM Cards</h1></section>
+            <section class="shadow-lg p-5 br">
+                <div class="container ngm" style="max-width:1140px">
+                    <!--card 1-->
+                    <div class="row mb-3">
+                        <div class="col mr-4">
+                            <h5 class="mt-2">Card 1</h5>
+                            <div class="card card-1">
+                                <div class="card-header">
+                                    Header 
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    <div class="btns">
+                                        <button href="#" class="btn btn-sm btn-secondary">Accept risk</button>
+                                        <button href="#" class="btn btn-sm btn-primary">Activate now</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <img src="images/logo.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5 class="mt-2">Card 1 > css hide header</h5>
+                            <div class="card card-1">
+                                <div class="card-header"  style="display: none">
+                                    Header 
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    <div class="btns">
+                                        <button href="#" class="btn btn-sm btn-secondary">Accept risk</button>
+                                        <button href="#" class="btn btn-sm btn-primary">Activate now</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <img src="images/logo.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card 2, 3-->
+                    <div class="row mb-3">
+                        <div class="col mr-4">
+                            <h5 class="mt-4">Card 2</h5>
+                            <div class="card card-2">
+                                <div class="card-header">
+                                    Header 
+                                </div>
+                                <div class="card-body">
+                                    <img class="float-left" src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                    <div class="btns">
+                                        <button href="#" class="btn btn-sm btn-secondary">Accept risk</button>
+                                        <button href="#" class="btn btn-sm btn-primary">Activate now</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>Recommended by</span><img src="images/logo.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mr-4">
+                            <h5 class="mt-4">Card 3</h5>
+                            <div class="card card-2">
+                                <div class="card-header">
+                                    Header 
+                                </div>
+                                <div class="card-body">
+                                    <img class="float-left" src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><img src="images/logo.png"></span>
+                                    <div class="btns">
+                                        <button href="#" class="btn btn-sm btn-secondary">Accept risk</button>
+                                        <button href="#" class="btn btn-sm btn-primary">Activate now</button>
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 4, 5-->
+                    <div class="row mb-3">
+                        <div class="col mr-4">
+                            <h5 class="mt-4">Card 4</h5>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Title</h4>
+                                    <div class="row mx-auto text-center">
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>  
+                                    </div>
+                                    <div class="row mt-4">
+                                        <button href="#" class="btn btn-block btn-primary m-0">Activate now</button>
+                                    </div>  
+                                </div>
+                                <div class="card-footer">
+                                    <img src="images/logo.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mr-4">
+                            <h5 class="mt-4">Card 5</h5>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Title</h4>
+                                    <div class="row mx-auto text-center">
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btns">
+                                        <button href="#" class="btn btn-sm btn-secondary">Accept risk</button>
+                                        <button href="#" class="btn btn-sm btn-primary">Activate now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sect5"><h1 class="display-10">Cards</h1></section>
+            <section class="shadow-lg p-5 br">
+                <h5 class="mb-4 mt-2">Card 1 - card deck with links</h5>
+                <div class="card-deck">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Buy now ></a>
+                            <a href="#" class="card-link">Learn more ></a>
+                        </div>
+                    </div>    
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Learn more ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 2 - card deck with buttons</h5>
+                <div class="card-deck text-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button type="button" class="btn btn-sm btn-primary">Buy More</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button type="button" class="btn btn-sm btn-primary">Buy More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 3 - card group</h5>
+                <div class="card-group">
+                    <div class="card text-center border-0">
+                        <div class="card-block">           
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+
+                        </div>
+                        <div class="card-body border-right">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center border-0">
+                        <div class="card-block">   
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body border-right">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center border-0">
+                        <div class="card-block">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body border-right">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center border-0">
+                        <div class="card-block">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-4">Card 4 - card deck</h5>
+                <div class="card-deck">
+                    <div class="card text-center">
+                        <div class="card-block">           
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-block">   
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center card-info">
+                        <div class="card-block">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-center card-info">
+                        <div class="card-block">
+                            <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 5 - in grids</h5>
+                <div class="row my-3">
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-block">           
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-block">   
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center card-info">
+                            <div class="card-block">
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center card-info">
+                            <div class="card-block">
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" >
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 6 - in nested grids</h5>
+                <div class="row my-3">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-block">           
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                                <h5 class="card-title">Title 1</h5>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-6">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 1</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 2</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-block">   
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                                <h5 class="card-title">Title 2</h5>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-4">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 1</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 2</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 3</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center card-info">
+                            <div class="card-block">
+                                <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-multi-device.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" class="rounded-circle" alt="">
+                                <h5 class="card-title">Title 3</h5>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-3">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 1</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 2</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 3</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card card-block rounded-0 border-left-0 border-right-0 border-top-o border-bottom-0 p-2">
+                                        <h5>col 4</h5>
+                                        <span class="small text-uppercase">content</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 7 - footer will align evenly in card deck</h5>
+                <div class="card-deck grayed mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-5.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Who's Protecting You?</h5>
+                            <p class="card-text">See how Paula Greve, McAfee Labs' Principal Engineer, keeps you safer online.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-block btn-primary">Read more</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Less content</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-block btn-primary">Read more</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-block btn-primary">Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 8 - footer will not align evenly in grids </h5>
+                <div class="container grayed">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-5.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Who's Protecting You?</h5>
+                                    <p class="card-text">See how Paula Greve, McAfee Labs' Principal Engineer, keeps you safer online.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-block btn-primary">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"> 
+                            <div class="card">
+                                <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-2.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-block btn-primary">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/article-3.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-block btn-primary">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 9 > in grid</h5>
+                <div class="container">
+                    <div class="card">
+                        <div class="row  p-3">
+                            <div class="col-md-4 pt-5 pl-3">
+                                <img src="https://www.mcafee.com/content/dam/amer/trial/ab/wt/img/hero-computer-2x.png" class="w-100">
+                            </div>
+                            <div class="col-md-8 p-3">
+                                <div class="card-block p-3">
+                                    <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                    <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="mb-4 mt-5">Card 10 > image overlay</h5>
+                <div class="jumbotron text-white text-center" style="background: url( https://www.mcafee.com/content/dam/amer/trial/ab/wt/css/fish-bg.png) no-repeat 0 0;background-size: cover">
+                    <div class="row" style="margin-top: 5rem;">
+                        <div class="col-sm">
+                            <div class="card bg-transparent border-0">
+                                <div class="col-auto">
+                                    <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                </div>
+                                <h2 class="card-title pricing-card-title">$0 <small>/ mo</small></h2>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>10 users included</li>
+                                    <li>2 GB of storage</li>
+                                    <li>Email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card bg-transparent border-0">
+                                <div class="col-auto">
+                                    <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                </div>
+                                <h2 class="card-title pricing-card-title">$15 <small>/ mo</small></h2>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>30 users included</li>
+                                    <li>15 GB of storage</li>
+                                    <li>Phone and email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card bg-transparent border-0">
+                                <div class="col-auto">
+                                    <img src="https://www.mcafee.com/content/dam/mcafee/assets/en-us/badges/feature-award.png/jcr:content/renditions/cq5dam.thumbnail.140.100.png" alt="">
+                                </div>
+                                <h2 class="card-title pricing-card-title">$29 <small>/ mo</small></h2>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>10 users included</li>
+                                    <li>2 GB of storage</li>
+                                    <li>Email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <h5 class="mb-4 mt-5">Card 11 > moved image to the side using flex</h5>
+                <div class="">
+                    <div class="card flex-row flex-wrap">
+                        <div class="card-header border-0">
+                            <img src="https://placehold.it/200" alt="">
+                        </div>
+                        <div class="card-block p-4">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Description</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card flex-row flex-wrap">
+                                <div class="card-header border-0">
+                                    <img src="https://placehold.it/200" alt="">
+                                </div>
+                                <div class="card-block p-4">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Description</p>
+                                    <a href="#" class="btn btn-primary">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card flex-row flex-wrap">
+                                <div class="card-header border-0">
+                                    <img src="https://placehold.it/200" alt="">
+                                </div>
+                                <div class="card-block p-4">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Description Description </p>
+                                    <a href="#" class="btn btn-primary">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sect6"><h1 class="display-10">Grids</h1></section>
+            <section class="shadow-lg p-5 br">
+                <h5 class="mb-4 mt-5">Grids - 3 columns grid with SVG circles</h5>
+                <div class="row svgCir">
+                    <div class="col-lg-4">
+                        <svg>        
+                            <circle r="50%" cx="50%" cy="50%" fill="#c01818" />
+                            <text text-anchor="middle" alignment-baseline="middle">
+                                <tspan x="50%" y="45%">BEST</tspan>  
+                                <tspan x="50%" y="60%">OFFER!</tspan> 
+                            </text>
+                        </svg>
+                        <p class="mt-3">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Buy now</a></p>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <svg>        
+                            <circle r="50%" cx="50%" cy="50%" fill="#F37321" />
+                            <text text-anchor="middle" alignment-baseline="middle">
+                                <tspan x="50%" y="45%">OK</tspan>  
+                                <tspan x="50%" y="60%">OFFER!</tspan> 
+                            </text>
+                        </svg>
+                        <p class="mt-3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Buy now</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <svg>
+                            <g>
+                                <circle r="50%" cx="50%" cy="50%" fill="#53565A" />
+                                <text x="50%" y="50%" text-anchor="middle" dy="0.3em">Bad choice</text>
+                            </g>
+                        </svg>
+                        <p class="mt-3">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Buy now</a></p>
+                    </div>
+                </div>
+            </section> 
+            <section id="sect7"><h1 class="display-10">Typography</h1></section>
+            <section class="shadow-lg p-5 br">
+                <h1 class="display-1">Display 1</h1>
+                <h1 class="display-2">Display 2</h1>
+                <h1 class="display-3">Display 3</h1>
+                <h1 class="display-4">Display 4</h1>
+                <h1 class="display-4">h1 - light - 56px</h1>
+                <h1>h1 - semibold - 36px</h1>
+                <h2>h2 - semibold - 32px</h2>
+                <h3>h3 - semibold - 24px</h3>
+                <h4>h4 - semibold - 18px</h4>
+                <p>body large - regular - 16px</p>
+                <p>body normal - regular - 14px</p>
+                <p>body small - regular - 12px</p>
+                <p>body extra small - regular - 10px</p>
+            </section>   
+            <section id="sect8"><h1 class="display-10 mt-5">Modal</h1></section>
+            <section class="shadow-lg p-5 br">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Lorem ipsum dolor sit amet</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-sm btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+        </main>
+
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+        <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+        <script>
+            /* sidenav */
+            let mainNavLinks = document.querySelectorAll("nav ul li a");
+            let mainSections = document.querySelectorAll("main section");
+            let lastId;
+            let cur = [];
+            window.addEventListener("scroll", event => {
+                let fromTop = window.scrollY;
+                mainNavLinks.forEach(link => {
+                    let section = document.querySelector(link.hash);
+                    if (
+                        section.offsetTop <= fromTop &&
+                        section.offsetTop + section.offsetHeight > fromTop
+                    ) {
+                        link.classList.add("current");
+                    } else {
+                        link.classList.remove("current");
+                    }
+                });
+            });
+
+            /* typing effect */
+            var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function() {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+            };
+
+            // Wrap text in a rectangle.
+            d3plus.textwrap()
+                .container(d3.select("#rectWrap"))
+                .draw();
+
+            // Wrap text in a rectangle, and size the text to fit.
+            d3plus.textwrap()
+                .container(d3.select("#rectResize"))
+                .resize(true)
+                .draw();
+
+            // Wrap text in a circle.
+            d3plus.textwrap()
+                .container(d3.select("#circleWrap"))
+                .draw();
+
+            // Wrap text in a circle, and size the text to fit.
+            d3plus.textwrap()
+                .container(d3.select("#circleResize"))
+                .resize(true)
+                .draw();
+        </script>
+
+    </body>
+</html>

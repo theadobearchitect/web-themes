@@ -1,0 +1,56 @@
+.cmp-a {
+    min-width: $btn-min-width;
+    color: $white;
+    padding: $btn-padding-y $btn-padding-x;
+    border-radius: $btn-border-radius;
+    font-weight: $font-weight-bold;
+}
+.cmp-btn--primary {
+    & .cmp-a {
+        background-color: map-get($theme-colors, primary);
+        border-color: map-get($theme-colors, primary);
+    }
+    & .cmp-a:hover, & a:not([href]):hover {
+        background-color: darken(map-get($theme-colors, primary), 15%);
+        border-color: darken(map-get($theme-colors, primary), 15%);
+        color: $white;
+    }   
+    & a:not([href]) {color:$white;};
+}
+.cmp-btn--secondary, .cmp-btn--secondary-trans {
+    & .cmp-a {
+        color: map-get($theme-colors, primary);
+        background-color: $white;
+        border-color: map-get($theme-colors, primary);
+    }
+    & .cmp-a:hover, & a:not([href]):hover {
+        color: darken(map-get($theme-colors, primary), 15%);
+        border-color: darken(map-get($theme-colors, primary), 15%);
+    } 
+    & a:not([href]) {color: map-get($theme-colors, primary)};
+}
+.cmp-btn--secondary-gray {
+    & .cmp-a {
+        background-color: map-get($theme-colors, secondary);
+        border-color: map-get($theme-colors, secondary);
+    }
+    & .cmp-a:hover, & a:not([href]):hover {
+        background-color: darken(map-get($theme-colors, secondary), 15%);
+        border-color: darken(map-get($theme-colors, secondary), 15%);
+        color: $white;
+    } 
+    & a:not([href]) {color:$white;};
+}
+.cmp-btn--secondary-trans {    
+    & .cmp-a {
+        background-color: transparent!important;
+    }
+}
+
+.btn:focus, .cmp-a:focus, .btn.focus, .focus.cmp-a {box-shadow: none;}
+
+// extending bootstrap classes
+.cmp-a  {@extend .btn;}
+.cmp-btn--sm .cmp-a {@extend .btn-sm; min-width: $btn-min-width-sm; padding: $btn-padding-y-sm $btn-padding-x-sm;}
+.cmp-btn--lg .cmp-a {@extend .btn-lg; font-weight: $font-weight-normal; min-width: $btn-min-width-lg; padding: $btn-padding-y-sm $btn-padding-x-sm;border-radius: $btn-border-radius!important;}
+.cmp-btn--block .cmp-a  {@extend .btn-block;}

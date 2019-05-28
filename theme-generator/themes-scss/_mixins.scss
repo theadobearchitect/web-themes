@@ -1,0 +1,9 @@
+/* mixin for background color opacity */
+@mixin bgcolor-simple($rgb) {
+    background:rgb($rgb);
+}
+@mixin bgcolor-op($opacity,$name,$r,$g,$b,$a) {
+    .#{$opacity} .#{$name} {
+        background:rgba($r,$g,$b,$a);
+    }
+}

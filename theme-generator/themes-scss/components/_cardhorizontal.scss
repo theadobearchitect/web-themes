@@ -1,0 +1,10 @@
+@include media-breakpoint-down(sm) {
+    .sideimg {
+        flex-wrap: wrap;
+        text-align: center;
+    } 
+}
+
+.cardhorizontal__contentwrapper {
+	@extend .p-4;
+}
